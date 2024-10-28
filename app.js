@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("first message");
 
 (function LIFE() {
@@ -5,3 +7,7 @@ console.log("first message");
 
     console.log("LIFE in code");
 })();
+
+a = "change var outside LIFE";
+
+console.log(a);
