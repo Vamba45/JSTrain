@@ -1,13 +1,15 @@
 "use strict";
 
-console.log("first message");
+// Event loop
 
-(function LIFE() {
-    var a = 15;
+console.log("log 1")
 
-    console.log("LIFE in code");
-})();
+setTimeout(() => console.log("from STO"));
 
-a = "change var outside LIFE";
+Promise.resolve().then(() => console.log("2"));
+Promise.resolve().then(() => console.log("2_"));
+Promise.resolve().then(() => setTimeout(console.log("3 time")));
+Promise.resolve().then((() => console.log("4")));
+Promise.resolve().then(() => console.log("4_"));
 
-console.log(a);
+console.log("log 5")
