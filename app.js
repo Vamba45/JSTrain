@@ -1,8 +1,19 @@
-const res = "B" + "a" + (1 - "hello");
-console.log(res); // BaNaN - NaN, потому что операция вычитания между числом и строкой даст этот результат
+let number = new Number(6);
+let number_ = 15;
 
-const res2 = (true && 3) + "d";
-console.log(res2); // 3d - оператор && возвращает первое falsy, либо последний операнд, в данном случае тройку. Далее конкатенация, т.к. оператор + используется со строкой
+let string = new String("str");
+let string_ = "str";
 
-const res3 = Boolean(true && 3) + "d";
-console.log(res3); // trued - оператор && возвращает первое falsy, либо последний операнд, в данном случае тройку, далее Boolean преобразует число, отличное от 0 к true. Далее конкатенация, т.к. оператор + используется со строкой
+let bool = new Boolean(true);
+let bool_ = false;
+
+let undef;
+let undef_ = undefined;
+
+let nll_ = null;
+
+let bigNum = BigInt(123456789012345678901234567890);
+let bigNum_ = 11n;
+
+let symbol = Symbol();
+let symbol_ = Symbol("id");
