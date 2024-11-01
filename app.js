@@ -1,15 +1,19 @@
-"use strict";
+let number = new Number(6);
+let number_ = 15;
 
-// Event loop
+let string = new String("str");
+let string_ = "str";
 
-console.log("log 1")
+let bool = new Boolean(true);
+let bool_ = false;
 
-setTimeout(() => console.log("from STO"));
+let undef;
+let undef_ = undefined;
 
-Promise.resolve().then(() => console.log("2"));
-Promise.resolve().then(() => console.log("2_"));
-Promise.resolve().then(() => setTimeout(console.log("3 time")));
-Promise.resolve().then((() => console.log("4")));
-Promise.resolve().then(() => console.log("4_"));
+let nll_ = null;
 
-console.log("log 5")
+let bigNum = BigInt(123456789012345678901234567890);
+let bigNum_ = 11n;
+
+let symbol = Symbol();
+let symbol_ = Symbol("id");
