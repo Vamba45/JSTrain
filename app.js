@@ -1,15 +1,8 @@
-"use strict";
+const res = "B" + "a" + (1 - "hello");
+console.log(res); // BaNaN - NaN, потому что операция вычитания между числом и строкой даст этот результат
 
-// Event loop
+const res2 = (true && 3) + "d";
+console.log(res2); // 3d - оператор && возвращает первое falsy, либо последний операнд, в данном случае тройку. Далее конкатенация, т.к. оператор + используется со строкой
 
-console.log("log 1")
-
-setTimeout(() => console.log("from STO"));
-
-Promise.resolve().then(() => console.log("2"));
-Promise.resolve().then(() => console.log("2_"));
-Promise.resolve().then(() => setTimeout(console.log("3 time")));
-Promise.resolve().then((() => console.log("4")));
-Promise.resolve().then(() => console.log("4_"));
-
-console.log("log 5")
+const res3 = Boolean(true && 3) + "d";
+console.log(res3); // trued - оператор && возвращает первое falsy, либо последний операнд, в данном случае тройку, далее Boolean преобразует число, отличное от 0 к true. Далее конкатенация, т.к. оператор + используется со строкой
